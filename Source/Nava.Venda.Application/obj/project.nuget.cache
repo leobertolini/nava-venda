@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "K/7zjO/OLWuKpXkPyIe9/ywDUGA/MyizxZ6T5Zvcyk9F2TiUxE0jRnmRwcjfPT6RtaBsXwt8Z6n6zUjFrXATcQ==",
+  "dgSpecHash": "o+fuxL8D3s/tZO2hoKLa6EFXlRChb4nO7F8Wmg2bhmtXlaJ9uI/AWyA+K/GrQNCi9uKYd/u1KZVKLO4DS7LQ1Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Leo\\Git\\Repos\\nava-venda\\Source\\Nava.Venda.Application\\Nava.Venda.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Leo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.9\\microsoft.extensions.dependencyinjection.abstractions.3.1.9.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],

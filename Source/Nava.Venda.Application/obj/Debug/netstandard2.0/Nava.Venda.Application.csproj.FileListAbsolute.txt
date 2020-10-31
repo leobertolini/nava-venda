@@ -1,0 +1,12 @@
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application\obj\Debug\netstandard2.0\Nava.Venda.Application.csprojAssemblyReference.cache
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application\obj\Debug\netstandard2.0\Nava.Venda.Application.AssemblyInfoInputs.cache
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application\obj\Debug\netstandard2.0\Nava.Venda.Application.AssemblyInfo.cs
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application\obj\Debug\netstandard2.0\Nava.Venda.Application.csproj.CoreCompileInputs.cache
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application\bin\Debug\netstandard2.0\Nava.Venda.Application.deps.json
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application\bin\Debug\netstandard2.0\Nava.Venda.Application.dll
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application\bin\Debug\netstandard2.0\Nava.Venda.Domain.dll
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application\bin\Debug\netstandard2.0\Nava.Venda.Domain.pdb
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application\obj\Debug\netstandard2.0\Nava.Venda.Application.csproj.CopyComplete
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application\bin\Debug\netstandard2.0\Nava.Venda.Application.pdb
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application\obj\Debug\netstandard2.0\Nava.Venda.Application.dll
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application\obj\Debug\netstandard2.0\Nava.Venda.Application.pdb

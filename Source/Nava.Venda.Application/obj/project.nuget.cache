@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "K/7zjO/OLWuKpXkPyIe9/ywDUGA/MyizxZ6T5Zvcyk9F2TiUxE0jRnmRwcjfPT6RtaBsXwt8Z6n6zUjFrXATcQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Leo\\Git\\Repos\\nava-venda\\Source\\Nava.Venda.Application\\Nava.Venda.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Leo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

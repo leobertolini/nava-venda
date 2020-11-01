@@ -1,7 +1,5 @@
 ﻿using Nava.Venda.Domain;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 
@@ -22,12 +20,12 @@ namespace Nava.Venda.Application
             return vendaSqlAdapter.ObterPorIdAsync(identificador);
         }
 
-        public Task<Guid> AtualizarStatusAsync(Guid identificador, StatusVenda novoStatusVenda)
+        public Task<bool> AtualizarStatusAsync(Guid identificador, StatusVenda novoStatusVenda)
         {
             return vendaSqlAdapter.AtualizarStatusAsync(identificador, novoStatusVenda);
         }
 
-        public Task<Guid> RegistrarAsync(Domain.Venda venda)
+        public Task<bool> RegistrarAsync(Domain.Venda venda)
         {
             return vendaSqlAdapter.RegistrarAsync(venda);
         }

@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nava.Venda.Application", "N
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nava.Venda.Application.Tests", "Nava.Venda.Application.Tests\Nava.Venda.Application.Tests.csproj", "{6B804D4B-6316-493A-88F0-8FAB941834DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nava.Venda.SqlAdapter", "Nava.Venda.SqlAdapter\Nava.Venda.SqlAdapter.csproj", "{92857450-451A-44B4-ABBF-800D7000152C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{6B804D4B-6316-493A-88F0-8FAB941834DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B804D4B-6316-493A-88F0-8FAB941834DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B804D4B-6316-493A-88F0-8FAB941834DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92857450-451A-44B4-ABBF-800D7000152C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92857450-451A-44B4-ABBF-800D7000152C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92857450-451A-44B4-ABBF-800D7000152C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92857450-451A-44B4-ABBF-800D7000152C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{21A45887-3B8E-43CA-8393-FCC2ECDCBA7C} = {E75FBA8D-58BC-40D5-8E30-D99F323A5108}
 		{78F4E85A-C63E-435D-8C14-DD49E7F7123C} = {E75FBA8D-58BC-40D5-8E30-D99F323A5108}
 		{6B804D4B-6316-493A-88F0-8FAB941834DC} = {E75FBA8D-58BC-40D5-8E30-D99F323A5108}
+		{92857450-451A-44B4-ABBF-800D7000152C} = {0F67CB41-71B5-4D84-9833-9AA5BAA4F348}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1941E04-B5AF-4684-B328-85BC8774DF68}

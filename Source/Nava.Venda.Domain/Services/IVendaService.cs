@@ -16,15 +16,15 @@ namespace Nava.Venda.Domain
         /// Registra uma nova venda.
         /// </summary>
         /// <param name="venda">Venda a ser registrada.</param>
-        /// <returns>Identificador da venda registrada.</returns>
-        Task<Guid> RegistrarAsync(Venda venda);
+        /// <returns>Valor booleano indicando o sucesso da operação.</returns>
+        Task<bool> RegistrarAsync(Venda venda);
 
         /// <summary>
         /// Atualiza uma venda existente.
         /// </summary>
         /// <param name="identificador">Identificador da venda a ser atualizada.</param>
         /// <param name="novoStatusVenda">Novo status a ser atribuído à venda.</param>
-        /// <returns>Identificador da venda atualizada.</returns>
-        Task<Guid> AtualizarStatusAsync(Guid identificador, StatusVenda novoStatusVenda);
+        /// <returns>Valor booleano indicando o sucesso da operação.</returns>
+        Task<bool> AtualizarStatusAsync(Guid identificador, StatusVenda novoStatusVenda);
     }
 }

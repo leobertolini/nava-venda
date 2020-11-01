@@ -1,0 +1,12 @@
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.SqlAdapter\bin\Debug\netstandard2.0\Nava.Venda.SqlAdapter.deps.json
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.SqlAdapter\bin\Debug\netstandard2.0\Nava.Venda.SqlAdapter.dll
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.SqlAdapter\obj\Debug\netstandard2.0\Nava.Venda.SqlAdapter.AssemblyInfoInputs.cache
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.SqlAdapter\obj\Debug\netstandard2.0\Nava.Venda.SqlAdapter.AssemblyInfo.cs
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.SqlAdapter\bin\Debug\netstandard2.0\Nava.Venda.SqlAdapter.pdb
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.SqlAdapter\bin\Debug\netstandard2.0\Nava.Venda.Domain.dll
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.SqlAdapter\bin\Debug\netstandard2.0\Nava.Venda.Domain.pdb
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.SqlAdapter\obj\Debug\netstandard2.0\Nava.Venda.SqlAdapter.csprojAssemblyReference.cache
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.SqlAdapter\obj\Debug\netstandard2.0\Nava.Venda.SqlAdapter.csproj.CopyComplete
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.SqlAdapter\obj\Debug\netstandard2.0\Nava.Venda.SqlAdapter.dll
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.SqlAdapter\obj\Debug\netstandard2.0\Nava.Venda.SqlAdapter.pdb
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.SqlAdapter\obj\Debug\netstandard2.0\Nava.Venda.SqlAdapter.csproj.CoreCompileInputs.cache

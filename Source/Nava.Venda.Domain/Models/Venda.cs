@@ -7,8 +7,8 @@ namespace Nava.Venda.Domain
     {
         public Guid Id { get; set; }
         public DateTime Data { get; set; }
-        public Funcionario Vendedor { get; set; }
-        public IEnumerable<Item> Itens { get; set; }
+        public Funcionario Funcionario { get; set; }
+        public IEnumerable<Item> Items { get; set; }
         public StatusVenda Status { get; set; }
     }
 }

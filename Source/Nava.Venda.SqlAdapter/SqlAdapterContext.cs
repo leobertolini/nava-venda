@@ -1,10 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Nava.Venda.Domain;
 
 namespace Nava.Venda.SqlAdapter
 {
@@ -16,8 +11,8 @@ namespace Nava.Venda.SqlAdapter
 
         }
 
-        public DbSet<Domain.Funcionario> Funcionarios { get; set; }
-        public DbSet<Domain.Item> Itens { get; set; }
+        public DbSet<Funcionario> Funcionarios { get; set; }
         public DbSet<Domain.Venda> Vendas { get; set; }
+        public DbSet<Item> Itens { get; set; }
     }
 }

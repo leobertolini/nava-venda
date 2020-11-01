@@ -23,9 +23,8 @@ namespace Nava.Venda.Domain
         /// <summary>
         /// Atualiza uma venda existente.
         /// </summary>
-        /// <param name="identificador">Identificador da venda a ser atualizada.</param>
-        /// <param name="novoStatusVenda">Novo status a ser atribuído à venda.</param>
+        /// <param name="venda">Venda a ser atualizada.</param>
         /// <returns>Valor booleano indicando o sucesso da operação.</returns>
-        Task<bool> AtualizarStatusAsync(Guid identificador, StatusVenda novoStatusVenda);
+        Task<bool> AtualizarStatusAsync(Venda venda);
     }
 }

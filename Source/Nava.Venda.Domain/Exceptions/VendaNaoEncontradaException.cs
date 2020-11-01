@@ -9,7 +9,7 @@ namespace Nava.Venda.Domain
         {
         }
 
-        public VendaNaoEncontradaException(string identificador) 
+        public VendaNaoEncontradaException(Guid identificador) 
             : base($"Venda não encontrada. Id: {identificador}")
         {
         }

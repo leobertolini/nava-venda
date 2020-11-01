@@ -42,7 +42,7 @@ namespace Nava.Venda.WebApi
             
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Nava Vendas Api V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "V1");
             });
 
             if (env.IsDevelopment())
@@ -107,23 +107,23 @@ namespace Nava.Venda.WebApi
 
             var vendaMock1 = new Domain.Venda()
             {
-                Id = Guid.Parse("0fd1cc41-55ab-47a8-af7e-ccc606a4a648"),
+                VendaId = Guid.Parse("0fd1cc41-55ab-47a8-af7e-ccc606a4a648"),
                 Data = DateTime.Now,
                 Status = StatusVenda.PagamentoAprovado,
-                Funcionario = funcionarioMock,
-                Items = new List<Item>()
-                { 
-                    itemMock1 
+                Vendedor = funcionarioMock,
+                Itens = new List<Item>()
+                {
+                    itemMock1
                 }
             };
 
             var vendaMock2 = new Domain.Venda()
             {
-                Id = Guid.Parse("ebf70b0b-f275-48eb-b6d5-61eaa050b86d"),
+                VendaId = Guid.Parse("ebf70b0b-f275-48eb-b6d5-61eaa050b86d"),
                 Data = DateTime.Now,
                 Status = StatusVenda.EnviadoTransportadora,
-                Funcionario = funcionarioMock,
-                Items = new List<Item>()
+                Vendedor = funcionarioMock,
+                Itens = new List<Item>()
                 {
                     itemMock2, itemMock3
                 }
@@ -132,7 +132,7 @@ namespace Nava.Venda.WebApi
             sqlContext.Vendas.Add(vendaMock1);
             sqlContext.Vendas.Add(vendaMock2);
 
-            sqlContext.SaveChanges();
+            sqlContext.SaveChangesAsync();
         }
     }
 }

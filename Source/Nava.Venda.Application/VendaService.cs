@@ -2,7 +2,6 @@
 using System;
 using System.Threading.Tasks;
 
-
 namespace Nava.Venda.Application
 {
     public class VendaService : IVendaService
@@ -15,14 +14,30 @@ namespace Nava.Venda.Application
                 throw new ArgumentNullException(nameof(vendaSqlAdapter));
         }
 
-        public Task<Domain.Venda> ObterPorIdAsync(Guid identificador)
+        public async Task<Domain.Venda> ObterPorIdAsync(Guid identificador)
         {
-            return vendaSqlAdapter.ObterPorIdAsync(identificador);
+            var venda = await vendaSqlAdapter.ObterPorIdAsync(identificador);
+
+            if (venda == null)
+                throw new VendaNaoEncontradaException(identificador);
+
+            return venda;
         }
 
-        public Task<bool> AtualizarStatusAsync(Guid identificador, StatusVenda novoStatusVenda)
+        public async Task<bool> AtualizarStatusAsync(Guid identificador, StatusVenda novaStatusVenda)
         {
-            return vendaSqlAdapter.AtualizarStatusAsync(identificador, novoStatusVenda);
+            var vendaParaAtualizar = await ObterPorIdAsync(identificador);
+
+            //TODO: tratar regra de alteração de status
+            vendaParaAtualizar.Status = novaStatusVenda;
+
+            if (false)
+                throw new TransicaoStatusVendaInvalidaException(vendaParaAtualizar.Status, novaStatusVenda);
+
+            var operacaoRealizada = await vendaSqlAdapter
+                .AtualizarStatusAsync(vendaParaAtualizar);
+
+            return operacaoRealizada;
         }
 
         public Task<bool> RegistrarAsync(Domain.Venda venda)

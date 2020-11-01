@@ -13,21 +13,18 @@ namespace Nava.Venda.SqlAdapter
         {
             SqlAdapterContext = sqlAdapterContext ??
                 throw new ArgumentNullException(nameof(sqlAdapterContext));
+
+            InicializarSqlContext();
         }
 
         public async Task<Domain.Venda> ObterPorIdAsync(Guid identificador)
         {
             return await SqlAdapterContext.Vendas
-                .FirstOrDefaultAsync(v => v.Id == identificador);
+                .FirstOrDefaultAsync(b => b.VendaId == identificador);
         }
 
-        public async Task<bool> AtualizarStatusAsync(Guid identificador, StatusVenda novoStatusVenda)
+        public async Task<bool> AtualizarStatusAsync(Domain.Venda venda)
         {
-            var venda = await SqlAdapterContext.Vendas
-                .FirstOrDefaultAsync(v => v.Id == identificador);
-
-            venda.Status = novoStatusVenda;
-
             SqlAdapterContext.Vendas.Update(venda);
 
             var quantidadeRegistrosAtualizados = await SqlAdapterContext.SaveChangesAsync();
@@ -42,6 +39,15 @@ namespace Nava.Venda.SqlAdapter
             var quantidadeRegistrosCriados = await SqlAdapterContext.SaveChangesAsync();
 
             return (quantidadeRegistrosCriados > 0);
+        }
+
+        private void InicializarSqlContext()
+        {
+            //Relações entre Itens e Funcionários com a Venda não estavam sendo carregadas.
+            //Por esse motivo foi realizada essa inicialização.
+            //TODO: Verificar relações não carregadas no EntityFramework.
+            SqlAdapterContext.Itens.ToArrayAsync();
+            SqlAdapterContext.Funcionarios.ToArrayAsync();
         }
     }
 }

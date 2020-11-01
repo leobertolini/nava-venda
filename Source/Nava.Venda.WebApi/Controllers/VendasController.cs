@@ -27,7 +27,7 @@ namespace Nava.Venda.WebApi.Controllers
         /// <param name="identificador">Identificador da venda.</param>
         /// <returns>Venda encontrada</returns>
         [ProducesResponseType(typeof(Domain.Venda), 200)]
-        [HttpGet("PorId/{identificador}"), AllowAnonymous]
+        [HttpGet("{identificador}"), AllowAnonymous]
         public async Task<IActionResult> GetVendaPorIdAsync(Guid identificador)
         {
             var venda = await vendaService.ObterPorIdAsync(identificador);

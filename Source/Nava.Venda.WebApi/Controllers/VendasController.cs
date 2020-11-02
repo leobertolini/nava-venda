@@ -24,17 +24,32 @@ namespace Nava.Venda.WebApi.Controllers
         /// <summary>
         /// Obtém uma venda pelo seu identificador.
         /// </summary>
-        /// <param name="identificador">Identificador da venda.</param>
+        /// <param name="identificadorVenda">Identificador da venda.</param>
         /// <returns>Venda encontrada</returns>
         [ProducesResponseType(typeof(Domain.Venda), 200)]
         [HttpGet("{identificador}"), AllowAnonymous]
-        public async Task<IActionResult> GetVendaPorIdAsync(Guid identificador)
+        public async Task<IActionResult> ObterVendaPorIdAsync(Guid identificadorVenda)
         {
-            var venda = await vendaService.ObterPorIdAsync(identificador);
+            var venda = await vendaService.ObterPorIdAsync(identificadorVenda);
 
             //mapper venda para vendaGetResult
             
             return Ok(venda);
+        }
+
+        /// <summary>
+        /// Atualiza o status de uma venda.
+        /// </summary>
+        /// <param name="identificadorVenda">Identificador da venda.</param>
+        /// <param name="novoStatusVenda">Novo status da venda.</param>
+        [ProducesResponseType(200)]
+        [HttpPatch("identificador"), AllowAnonymous]
+        public async Task<IActionResult> AtualizarVendaAsync(Guid identificadorVenda, 
+            StatusVenda novoStatusVenda)
+        {
+            await vendaService.AtualizarStatusAsync(identificadorVenda, novoStatusVenda);
+
+            return Ok();
         }
     }
 }

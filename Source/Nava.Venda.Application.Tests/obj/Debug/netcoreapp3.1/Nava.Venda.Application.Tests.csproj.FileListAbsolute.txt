@@ -93,3 +93,4 @@ C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application.Tests\obj\Debug\
 C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application.Tests\obj\Debug\netcoreapp3.1\Nava.Venda.Application.Tests.dll
 C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application.Tests\obj\Debug\netcoreapp3.1\Nava.Venda.Application.Tests.pdb
 C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application.Tests\obj\Debug\netcoreapp3.1\Nava.Venda.Application.Tests.genruntimeconfig.cache
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Application.Tests\obj\Debug\netcoreapp3.1\Nava.Venda.Application.Tests.csprojAssemblyReference.cache

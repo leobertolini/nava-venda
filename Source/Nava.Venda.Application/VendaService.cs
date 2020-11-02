@@ -1,5 +1,8 @@
 ﻿using Nava.Venda.Domain;
+using Nava.Venda.Domain.Exceptions;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Nava.Venda.Application
@@ -24,15 +27,23 @@ namespace Nava.Venda.Application
             return venda;
         }
 
-        public async Task<bool> AtualizarStatusAsync(Guid identificador, StatusVenda novaStatusVenda)
+        public async Task<bool> AtualizarStatusAsync(Guid identificador, StatusVenda novoStatusVenda)
         {
             var vendaParaAtualizar = await ObterPorIdAsync(identificador);
 
-            //TODO: tratar regra de alteração de status
-            vendaParaAtualizar.Status = novaStatusVenda;
+            //Obtém as configurações de transições possíveis entre os status de venda.
+            var configuracaoTransicaoStatusPossivel = ObterConfiguracaoTransicoesStatus();
 
-            if (false)
-                throw new TransicaoStatusVendaInvalidaException(vendaParaAtualizar.Status, novaStatusVenda);
+            //Obtém os status permitidos, baseado na configuração e no status atual da venda. 
+            var transicoesPossiveis = configuracaoTransicaoStatusPossivel
+                .Where(t => t.StatusAtual == vendaParaAtualizar.Status)
+                .Select(r => r.StatusPermitido);
+
+            //Verifica se o novo status para a venda é permitido.
+            if (!transicoesPossiveis.Contains(novoStatusVenda))
+                throw new TransicaoStatusVendaInvalidaException(vendaParaAtualizar.Status, novoStatusVenda);
+
+            vendaParaAtualizar.Status = novoStatusVenda;
 
             var operacaoRealizada = await vendaSqlAdapter
                 .AtualizarStatusAsync(vendaParaAtualizar);
@@ -42,7 +53,23 @@ namespace Nava.Venda.Application
 
         public Task<bool> RegistrarAsync(Domain.Venda venda)
         {
+            if (venda.Itens?.Count() == 0)
+                throw new VendaNaoPossuiItemException();
+            
             return vendaSqlAdapter.RegistrarAsync(venda);
+        }
+
+        private IList<(StatusVenda StatusAtual, StatusVenda StatusPermitido)> ObterConfiguracaoTransicoesStatus()
+        {
+            //Configura as transições possíveis de status usando Tuplas.
+            return new List<(StatusVenda StatusAtual, StatusVenda StatusPermitido)>()
+            {
+                (StatusVenda.AguardandoPagamento, StatusVenda.PagamentoAprovado),
+                (StatusVenda.AguardandoPagamento, StatusVenda.Cancelada),
+                (StatusVenda.PagamentoAprovado, StatusVenda.EnviadoTransportadora),
+                (StatusVenda.PagamentoAprovado, StatusVenda.Cancelada),
+                (StatusVenda.EnviadoTransportadora, StatusVenda.Entregue)
+            };
         }
     }
 }

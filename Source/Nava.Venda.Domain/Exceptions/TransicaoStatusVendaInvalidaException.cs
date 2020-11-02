@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Nava.Venda.Domain.Exceptions;
+using System;
 using System.Runtime.Serialization;
 
 namespace Nava.Venda.Domain
 {
-    public class TransicaoStatusVendaInvalidaException : Exception
+    public class TransicaoStatusVendaInvalidaException : NegocioException
     {
         public TransicaoStatusVendaInvalidaException()
         {
@@ -12,6 +13,7 @@ namespace Nava.Venda.Domain
         public TransicaoStatusVendaInvalidaException(StatusVenda statusAtual, StatusVenda novoStatus) 
             : base($"Transição de status inválida de {statusAtual} para {novoStatus}.")
         {
+
         }
 
         public TransicaoStatusVendaInvalidaException(string message, Exception innerException) 

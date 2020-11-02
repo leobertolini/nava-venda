@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Nava.Venda.Domain.Exceptions;
+using System;
 using System.Runtime.Serialization;
 
 namespace Nava.Venda.Domain
 {
-    public class VendaNaoEncontradaException : Exception
+    public class VendaNaoEncontradaException : NegocioException
     {
         public VendaNaoEncontradaException()
         {

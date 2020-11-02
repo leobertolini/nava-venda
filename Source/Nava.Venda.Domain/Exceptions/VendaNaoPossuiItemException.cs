@@ -3,7 +3,7 @@ using System.Runtime.Serialization;
 
 namespace Nava.Venda.Domain.Exceptions
 {
-    public class VendaNaoPossuiItemException : Exception
+    public class VendaNaoPossuiItemException : NegocioException
     {
         public VendaNaoPossuiItemException()
         {

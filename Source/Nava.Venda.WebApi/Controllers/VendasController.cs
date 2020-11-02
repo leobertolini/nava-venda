@@ -24,16 +24,28 @@ namespace Nava.Venda.WebApi.Controllers
         /// Obtém uma venda pelo seu identificador.
         /// </summary>
         /// <param name="identificadorVenda">Identificador da venda.</param>
-        /// <returns>Venda encontrada</returns>
+        /// <returns>Venda encontrada.</returns>
         [ProducesResponseType(typeof(VendaGetResult), 200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
         [HttpGet("{identificador}"), AllowAnonymous]
         public async Task<IActionResult> ObterVendaPorIdAsync(Guid identificador)
         {
-            var venda = await vendaService.ObterPorIdAsync(identificador);
-
-            var vendaGetResult = Mapper.Map<VendaGetResult>(venda);
-            
-            return Ok(vendaGetResult);
+            try
+            {
+                var venda = await vendaService.ObterPorIdAsync(identificador);
+                
+                var vendaGetResult = Mapper.Map<VendaGetResult>(venda);
+                
+                return Ok(vendaGetResult);
+            }
+            catch (NegocioException e)
+            {
+                return BadRequest(new
+                {
+                    MensagemErro = e.Message
+                });
+            }
         }
 
         /// <summary>
@@ -42,13 +54,25 @@ namespace Nava.Venda.WebApi.Controllers
         /// <param name="identificadorVenda">Identificador da venda.</param>
         /// <param name="novoStatusVenda">Novo status da venda.</param>
         [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
         [HttpPatch("{identificador}"), AllowAnonymous]
         public async Task<IActionResult> AtualizarVendaAsync(Guid identificador, 
             StatusVendaDto novoStatusVendaDto)
         {
             var novoStatusVenda = Mapper.Map<StatusVenda>(novoStatusVendaDto);
 
-            await vendaService.AtualizarStatusAsync(identificador, novoStatusVenda);
+            try
+            {
+                await vendaService.AtualizarStatusAsync(identificador, novoStatusVenda);
+            }
+            catch (NegocioException e)
+            {
+                return BadRequest(new 
+                { 
+                    MensagemErro = e.Message 
+                });
+            }
 
             return Ok();
         }
@@ -58,12 +82,24 @@ namespace Nava.Venda.WebApi.Controllers
         /// </summary>
         /// <param name="venda">Venda a ser registrada.</param>
         [ProducesResponseType(200)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
         [HttpPost, AllowAnonymous]
         public async Task<IActionResult> RegistrarVendaAsync(VendaPost vendaPost)
         {
             var venda = Mapper.Map<Domain.Venda>(vendaPost);
 
-            await vendaService.RegistrarAsync(venda);
+            try
+            { 
+                await vendaService.RegistrarAsync(venda);
+            }
+            catch (NegocioException e)
+            {
+                return BadRequest(new
+                {
+                    MensagemErro = e.Message
+                });
+            }
 
             return Ok();
         }

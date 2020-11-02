@@ -29,6 +29,8 @@ namespace Nava.Venda.Application
 
         public async Task<bool> AtualizarStatusAsync(Guid identificador, StatusVenda novoStatusVenda)
         {
+            var y = 10;
+            var x = y / 0;
             var vendaParaAtualizar = await ObterPorIdAsync(identificador);
 
             //Obtém as configurações de transições possíveis entre os status de venda.
@@ -45,7 +47,7 @@ namespace Nava.Venda.Application
 
             vendaParaAtualizar.Status = novoStatusVenda;
 
-            var operacaoRealizada = await vendaSqlAdapter
+            var operacaoRealizada = await vendaSqlAdapter   
                 .AtualizarStatusAsync(vendaParaAtualizar);
 
             return operacaoRealizada;

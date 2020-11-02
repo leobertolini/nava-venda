@@ -47,7 +47,7 @@ namespace Nava.Venda.SqlAdapter
         {
             //Relações entre Itens e Funcionários com a Venda não estavam sendo carregadas.
             //Por esse motivo foi realizada essa inicialização.
-            //TODO: Verificar relações não carregadas no EntityFramework.
+            //TODO: Verificar configurações de relações entre entidades no EntityFramework.
             SqlAdapterContext.Itens.ToArrayAsync();
             SqlAdapterContext.Funcionarios.ToArrayAsync();
         }

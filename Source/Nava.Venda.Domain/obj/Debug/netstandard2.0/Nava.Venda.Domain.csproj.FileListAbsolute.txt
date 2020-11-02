@@ -1,8 +1,0 @@
-C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Domain\bin\Debug\netstandard2.0\Nava.Venda.Domain.deps.json
-C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Domain\bin\Debug\netstandard2.0\Nava.Venda.Domain.dll
-C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Domain\bin\Debug\netstandard2.0\Nava.Venda.Domain.pdb
-C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Domain\obj\Debug\netstandard2.0\Nava.Venda.Domain.AssemblyInfoInputs.cache
-C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Domain\obj\Debug\netstandard2.0\Nava.Venda.Domain.AssemblyInfo.cs
-C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Domain\obj\Debug\netstandard2.0\Nava.Venda.Domain.csproj.CoreCompileInputs.cache
-C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Domain\obj\Debug\netstandard2.0\Nava.Venda.Domain.dll
-C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.Domain\obj\Debug\netstandard2.0\Nava.Venda.Domain.pdb

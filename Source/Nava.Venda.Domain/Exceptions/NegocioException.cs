@@ -7,8 +7,6 @@ namespace Nava.Venda.Domain
 {
     public class NegocioException : Exception
     {
-        public virtual string Key => "NegocioException";
-
         public NegocioException()
         {
         }

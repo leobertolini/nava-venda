@@ -1,5 +1,4 @@
-﻿using Nava.Venda.Domain.Exceptions;
-using System;
+﻿using System;
 using System.Runtime.Serialization;
 
 namespace Nava.Venda.Domain

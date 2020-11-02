@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Nava.Venda.Domain.Exceptions
+namespace Nava.Venda.Domain
 {
     public class VendaNaoPossuiItemException : NegocioException
     {
@@ -9,8 +9,8 @@ namespace Nava.Venda.Domain.Exceptions
         {
         }
 
-        public VendaNaoPossuiItemException(string message) 
-            : base("Venda não possui nenhum item relacionado.")
+        public VendaNaoPossuiItemException(Guid identificadorVenda) 
+            : base($"Venda não possui nenhum item relacionado. VendaId: {identificadorVenda}")
         {
         }
 

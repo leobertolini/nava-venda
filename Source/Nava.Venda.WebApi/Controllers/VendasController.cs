@@ -23,7 +23,7 @@ namespace Nava.Venda.WebApi.Controllers
         /// <summary>
         /// Obtém uma venda pelo seu identificador.
         /// </summary>
-        /// <param name="identificadorVenda">Identificador da venda.</param>
+        /// <param name="identificador">Identificador da venda.</param>
         /// <returns>Venda encontrada.</returns>
         [ProducesResponseType(typeof(VendaGetResult), 200)]
         [ProducesResponseType(400)]
@@ -51,8 +51,8 @@ namespace Nava.Venda.WebApi.Controllers
         /// <summary>
         /// Atualiza o status de uma venda.
         /// </summary>
-        /// <param name="identificadorVenda">Identificador da venda.</param>
-        /// <param name="novoStatusVenda">Novo status da venda.</param>
+        /// <param name="identificador">Identificador da venda.</param>
+        /// <param name="novoStatusVendaDto">Novo status da venda.</param>
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(500)]
@@ -80,7 +80,7 @@ namespace Nava.Venda.WebApi.Controllers
         /// <summary>
         /// Registra uma nova venda.
         /// </summary>
-        /// <param name="venda">Venda a ser registrada.</param>
+        /// <param name="vendaPost">Venda a ser registrada.</param>
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
         [ProducesResponseType(500)]

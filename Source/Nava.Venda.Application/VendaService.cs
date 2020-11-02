@@ -1,5 +1,4 @@
 ﻿using Nava.Venda.Domain;
-using Nava.Venda.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,8 +28,6 @@ namespace Nava.Venda.Application
 
         public async Task<bool> AtualizarStatusAsync(Guid identificador, StatusVenda novoStatusVenda)
         {
-            var y = 10;
-            var x = y / 0;
             var vendaParaAtualizar = await ObterPorIdAsync(identificador);
 
             //Obtém as configurações de transições possíveis entre os status de venda.
@@ -55,8 +52,8 @@ namespace Nava.Venda.Application
 
         public Task<bool> RegistrarAsync(Domain.Venda venda)
         {
-            if (venda.Itens?.Count() == 0)
-                throw new VendaNaoPossuiItemException();
+            if (venda.Itens?.Count() == 0 || venda.Itens == null)
+                throw new VendaNaoPossuiItemException(venda.VendaId);
             
             return vendaSqlAdapter.RegistrarAsync(venda);
         }

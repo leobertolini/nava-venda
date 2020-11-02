@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Nava.Venda.Domain;
 using Nava.Venda.SqlAdapter;
 using Nava.Venda.SqlAdapter.Microsoft.Extensions.DependencyInjection;
+using AutoMapper;
 
 namespace Nava.Venda.WebApi
 {
@@ -20,6 +21,14 @@ namespace Nava.Venda.WebApi
         }
 
         public IConfiguration Configuration { get; }
+
+        static Startup()
+        {
+            Mapper.Initialize(config =>
+            {
+                config.AddProfile<WebApiMapperProfile>();
+            });
+        }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)

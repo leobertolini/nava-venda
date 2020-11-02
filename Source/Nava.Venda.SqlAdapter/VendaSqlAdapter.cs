@@ -34,6 +34,8 @@ namespace Nava.Venda.SqlAdapter
 
         public async Task<bool> RegistrarAsync(Domain.Venda venda)
         {
+            venda.VendaId = Guid.NewGuid();
+
             await SqlAdapterContext.Vendas.AddAsync(venda);
 
             var quantidadeRegistrosCriados = await SqlAdapterContext.SaveChangesAsync();

@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Nava.Venda.Domain;
+using Nava.Venda.WebApi.Dtos;
 
 namespace Nava.Venda.WebApi.Controllers
 {
@@ -26,15 +25,15 @@ namespace Nava.Venda.WebApi.Controllers
         /// </summary>
         /// <param name="identificadorVenda">Identificador da venda.</param>
         /// <returns>Venda encontrada</returns>
-        [ProducesResponseType(typeof(Domain.Venda), 200)]
+        [ProducesResponseType(typeof(VendaGetResult), 200)]
         [HttpGet("{identificador}"), AllowAnonymous]
-        public async Task<IActionResult> ObterVendaPorIdAsync(Guid identificadorVenda)
+        public async Task<IActionResult> ObterVendaPorIdAsync(Guid identificador)
         {
-            var venda = await vendaService.ObterPorIdAsync(identificadorVenda);
+            var venda = await vendaService.ObterPorIdAsync(identificador);
 
-            //mapper venda para vendaGetResult
+            var vendaGetResult = Mapper.Map<VendaGetResult>(venda);
             
-            return Ok(venda);
+            return Ok(vendaGetResult);
         }
 
         /// <summary>
@@ -43,11 +42,28 @@ namespace Nava.Venda.WebApi.Controllers
         /// <param name="identificadorVenda">Identificador da venda.</param>
         /// <param name="novoStatusVenda">Novo status da venda.</param>
         [ProducesResponseType(200)]
-        [HttpPatch("identificador"), AllowAnonymous]
-        public async Task<IActionResult> AtualizarVendaAsync(Guid identificadorVenda, 
-            StatusVenda novoStatusVenda)
+        [HttpPatch("{identificador}"), AllowAnonymous]
+        public async Task<IActionResult> AtualizarVendaAsync(Guid identificador, 
+            StatusVendaDto novoStatusVendaDto)
         {
-            await vendaService.AtualizarStatusAsync(identificadorVenda, novoStatusVenda);
+            var novoStatusVenda = Mapper.Map<StatusVenda>(novoStatusVendaDto);
+
+            await vendaService.AtualizarStatusAsync(identificador, novoStatusVenda);
+
+            return Ok();
+        }
+
+        /// <summary>
+        /// Registra uma nova venda.
+        /// </summary>
+        /// <param name="venda">Venda a ser registrada.</param>
+        [ProducesResponseType(200)]
+        [HttpPost, AllowAnonymous]
+        public async Task<IActionResult> RegistrarVendaAsync(VendaPost vendaPost)
+        {
+            var venda = Mapper.Map<Domain.Venda>(vendaPost);
+
+            await vendaService.RegistrarAsync(venda);
 
             return Ok();
         }

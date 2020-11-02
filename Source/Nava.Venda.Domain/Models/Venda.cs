@@ -9,6 +9,6 @@ namespace Nava.Venda.Domain
         public DateTime Data { get; set; }
         public Funcionario Vendedor { get; set; }
         public IEnumerable<Item> Itens { get; set; }
-        public StatusVenda Status { get; set; }
+        public StatusVenda Status { get; set; } = StatusVenda.AguardandoPagamento;
     }
 }

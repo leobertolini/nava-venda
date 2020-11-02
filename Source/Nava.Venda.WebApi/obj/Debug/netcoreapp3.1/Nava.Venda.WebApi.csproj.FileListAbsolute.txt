@@ -43,8 +43,9 @@ C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.WebApi\bin\Debug\netcoreapp3
 C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.WebApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.WebApi\bin\Debug\netcoreapp3.1\Nava.Venda.Application.dll
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.WebApi\bin\Debug\netcoreapp3.1\Nava.Venda.Application.pdb
+C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.WebApi\bin\Debug\netcoreapp3.1\AutoMapper.dll
 C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.WebApi\obj\Debug\netcoreapp3.1\Nava.Venda.WebApi.csproj.CoreCompileInputs.cache
 C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.WebApi\obj\Debug\netcoreapp3.1\Nava.Venda.WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.WebApi\obj\Debug\netcoreapp3.1\Nava.Venda.WebApi.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.WebApi\bin\Debug\netcoreapp3.1\Nava.Venda.Application.dll
-C:\Users\Leo\Git\Repos\nava-venda\Source\Nava.Venda.WebApi\bin\Debug\netcoreapp3.1\Nava.Venda.Application.pdb

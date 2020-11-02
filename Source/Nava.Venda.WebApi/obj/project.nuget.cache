@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "TzbMpHkd5WUGpxQVyGDooroZ1G1F0HUe3aapncU5pRon07abC2EkyQzvC7E3rW3IiLnCP/nQ3rAsxF1PFNPDDg==",
+  "dgSpecHash": "jmJwV7YV48xu4K8lDg96jgM6ko6SrL+eEBG6bkijGFIXuzq1rgv4ftUtyUdhOubcq3UbjpSS/j91chJeqNeBrA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Leo\\Git\\Repos\\nava-venda\\Source\\Nava.Venda.WebApi\\Nava.Venda.WebApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Leo\\.nuget\\packages\\automapper\\8.1.1\\automapper.8.1.1.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.9\\microsoft.entityframeworkcore.3.1.9.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.9\\microsoft.entityframeworkcore.abstractions.3.1.9.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.9\\microsoft.entityframeworkcore.analyzers.3.1.9.nupkg.sha512",
@@ -21,13 +23,23 @@
     "C:\\Users\\Leo\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.9\\microsoft.extensions.logging.abstractions.3.1.9.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\microsoft.extensions.options\\3.1.9\\microsoft.extensions.options.3.1.9.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.9\\microsoft.extensions.primitives.3.1.9.nupkg.sha512",
+    "C:\\Users\\Leo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Leo\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\Leo\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
-    "C:\\Users\\Leo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+    "C:\\Users\\Leo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\Leo\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\Leo\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\Leo\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
+    "C:\\Users\\Leo\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
+    "C:\\Users\\Leo\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\Leo\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Leo\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\Leo\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }
